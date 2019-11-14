@@ -1,0 +1,96 @@
+/*        header           */
+
+.title{
+    border-top: 5px solid #c24e4b;
+    background: #1e2c35; 
+}
+
+.title__principal{
+    font-size: 5em;
+    font-family: Tahoma;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+
+/*        form         */
+.titulo-secao{
+    margin-top: 2em;
+    font-family: Tahoma;
+    color: #1e2c35;
+    text-align: center;
+    font-size: 2em;
+}
+
+.contato input{
+  display: block;
+}
+
+.contato label{
+    display: block;
+    font-family: Tahoma;
+    color: #1e2c35;
+    padding: 10px 20px 0px 0px;
+}
+
+form {
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 4em;
+}
+
+.input-form{
+    display: flex;
+}
+
+.contato input, textarea {
+  width: 100%;
+  margin-bottom: .8em;
+  padding: 4px 8px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+.contato button {
+  margin: 1rem;
+  background: #c24e4b;
+  border: 0;
+  color: white;
+  width: 210px;
+  height: 38px;
+  font-size: 1.2em;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 4px #888888;
+}
+
+.contato .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*        footer           */
+
+.title__footer{
+    font-size: 1rem;
+    font-family: Tahoma;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.footer{
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #1e2c35; 
+}
+
+footer img{
+    width: 2em;
+    margin: 5px 5px;
+}
