@@ -1,7 +1,7 @@
 /*        header           */
 
 .title{
-    border-top: 5px solid #c24e4b;
+    border-top: .5rem solid #c24e4b;
     background: #1e2c35; 
 }
 
@@ -10,13 +10,137 @@
     font-family: Tahoma;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 40px;
 }
 
+.sub__title{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.subtitle__principal{
+    text-align: center;
+    color: white;
+    font-family: Tahoma;
+    font-size: 1rem;
+    padding: 0 1em 2em 0;
+}
+
+/*        content      */
+
+.content{
+    padding: 3em 8em; 
+    background: #c24e4b;
+}
+
+.content__title{
+    margin-bottom: 1em;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    font-family: Tahoma;
+}
+
+.content__text{
+    font-size: 1.4em;
+    text-align: justify;
+    color: white;
+    font-family: Tahoma;
+    word-break: break-all;
+    padding: 0 6em;
+}
+
+/*        grid         */
+
+.app {
+    background: white;
+    display: grid;  
+    grid-template-areas: 
+        "cabecalho"
+        "conteudo"
+        "imagens"
+        "tabela"
+        "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 200px auto auto; 
+}
+
+.imagens{
+    grid-area: imagens;
+    background: #1e2c35;
+}
+
+.destaques{
+    display: grid;
+    grid-gap: .2rem;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    height: calc(50vh);
+    padding: 5em;
+}
+
+.destaques__item__1{
+    background: url(../img/salgado-1.jpg) center / cover no-repeat;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.destaques__item__2{
+    background: url(../img/salgado-2.jpg) center / cover no-repeat;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.destaques__item__3{
+    background: url(../img/salgado-3.jpg) center / cover no-repeat;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.destaques__item__4{
+    background: url(../img/doce-1.jpg) center / cover no-repeat;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.destaques__item__5{
+    background: url(../img/doce-2.jpg) center / cover no-repeat;
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+}
+/*        table        */
+
+.tabelas__produtos{
+    display: flex;
+    justify-content: center;
+}
+
+.tabela__produtos__precos{  
+    display: table;
+    text-align: left;
+    color: black;
+    line-height: 3rem;
+    font-family: Tahoma;
+    border-left: #1e2c35 solid 1em;
+    border-right: #1e2c35 solid 1em;
+}
+
+tr,td,th{
+    padding: 1em 3em;
+}
+
+td,td{
+    font-size: 14px;
+}
 
 /*        form         */
 .titulo-secao{
     margin-top: 2em;
+    margin-bottom: 1em;
     font-family: Tahoma;
     color: #1e2c35;
     text-align: center;
@@ -31,10 +155,22 @@
     display: block;
     font-family: Tahoma;
     color: #1e2c35;
-    padding: 10px 20px 0px 0px;
+    padding: 10px 20px 0px 20px;
+    margin-top: -7px;
+}
+
+.checkbox{
+    display: -webkit-inline-box;
+}
+
+.input_chekbox{
+    width: 2em !important;
+    margin-left: 1rem;
+    font-family: tahoma;
 }
 
 form {
+  border-left: #c24e4b solid .5rem;
   margin: 0 auto;
   width: 40%;
   margin-bottom: 4em;
@@ -44,9 +180,14 @@ form {
     display: flex;
 }
 
-.contato input, textarea {
-  width: 100%;
-  margin-bottom: .8em;
+.input-form-space{
+    margin-right: 2em;
+    width: 16%;
+}
+
+.contato input, textarea, select{
+  width: 96%;
+  margin-bottom: 1.5em;
   padding: 4px 8px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -55,7 +196,6 @@ form {
 
 .contato button {
   margin: 1rem;
-  background: #c24e4b;
   border: 0;
   color: white;
   width: 210px;
@@ -63,14 +203,37 @@ form {
   font-size: 1.2em;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  box-shadow: 3px 4px #888888;
+  box-shadow: 3px 4px #00000082;
+}
+
+.btn-ok{
+    background: #4bc280;
+}
+
+.btn-error{
+    background: #c24e4b;
 }
 
 .contato .buttons{
     display: flex;
     justify-content: space-between;
+    margin-left: 3em;
 }
 
+/*        div              */
+
+.divisoria_1{
+    margin-top: 3em;
+    width: 100%;
+    height: 5%;
+    border-bottom: #1e2c35 solid 2em;
+}
+
+.divisoria_2{
+    width: 100%;
+    height: 5%;
+    border-bottom: #c24e4b solid 2em;
+}
 
 /*        footer           */
 
@@ -88,6 +251,7 @@ form {
     bottom: 0;
     width: 100%;
     background: #1e2c35; 
+    border-bottom: #c24e4b .5rem solid;
 }
 
 footer img{

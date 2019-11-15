@@ -10,52 +10,155 @@
 	<link rel="stylesheet" type="text/css" href="css/site.css"/>
 	<title>Palmeirinha Festas</title>
 </head>
-<body>
-	<header>
+<body class="app">
+	<header class="cabecalho">
 		<div class="title">
-			<p class="title__principal">Palmeirinha Festas</p>
+            <p class="title__principal">Palmeirinha Festas</p>
+            <div class="sub__title">
+                <a href="#quitutes"><p class="subtitle__principal">► Quitutes</p></a>
+                <a href="#pedidos"><p class="subtitle__principal">► Pedidos</p></a>
+            </div>
 		</div>
     </header>
+    <section class="conteudo">
+        <div class="content">
+            <h1 class="content__title">Quem Somos</h1>
+            <p class="content__text">
+                Dona Palmeirinha trabalha há mais de 50 anos ramo,
+                sempre fazendo a alegria da festa. Seus doces e salgados 
+                são reconhecidos pelo sabor, beleza e qualidade.
+                Veja alguns de nossos produtos:
+            </p>
+        </div>
+    </section>
+    <main class="imagens">
+        <section class="destaques">
+            <div class="destaques__item__1 caixa"></div>
+            <div class="destaques__item__2 caixa"></div>
+            <div class="destaques__item__3 caixa"></div>
+            <div class="destaques__item__4 caixa"></div>
+            <div class="destaques__item__5 caixa"></div>
+        </section>
+    </main>
+    <section class="tabela">
+        <h2 class="titulo-secao" id="quitutes">Quitutes</h2>
+        <div class="tabelas__produtos">
+				<table class="tabela__produtos__precos">
+					<thead>
+						<tr>
+							<th>Categoria</th>
+							<th>Nome</th>
+							<th>Valor Unitário</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>DOCE</td>
+							<td>Brigadeiro</td>
+							<td>R$15,00</td>
+						</tr>
+						<tr>
+							<td>DOCE</td>
+							<td>Beijinho</td>
+							<td>R$16,00</td>
+						</tr>
+						<tr>
+							<td>DOCE</td>
+							<td>Brigadeiro Gourmet</td>
+							<td>R$18,00</td>
+						</tr>
+						<tr>
+							<td>SALGADO</td>
+							<td>Coxinha</td>
+							<td>R$14,00</td>
+                        </tr>
+                        <tr>
+                            <td>SALGADO</td>
+                            <td>Pastel</td>
+                            <td>R$14,00</td>
+                        </tr>
+                        <tr>
+                            <td>SALGADO</td>
+                            <td>Bolinha de Queijo</td>
+                            <td>R$14,00</td>
+                        </tr>
+					</tbody>
+				</table>
+            </div>
+            <div class="divisoria_1"></div>
+            <div class="divisoria_2"></div>
+    </section>
     <section class="contato">
 		<div class="container">
-			<h2 class="titulo-secao">Contato</h2>
 			<form action="">
+                <h2 class="titulo-secao" id="pedidos">Pedidos</h2>
 
                 <div class="input-form">
-                    <label>Nome:</label>
-                    <input type="text" placeholder="Digite seu nome...">
+                    <div class="input-form-space">
+                        <label>Nome:</label>
+                    </div>
+                        <input type="text" placeholder="Digite seu nome...">
                 </div>
 
                 <div class="input-form">
-                    <label>Entrega:</label>
-                    <input type="date"  name="calendario"/>
-                    <input type="text" placeholder="Horário">
+                    <div class="input-form-space">
+                        <label>Entrega:</label>
+                    </div>
+                        <input type="date"  name="calendario"/>
+                        <input type="text" placeholder="Horário">
                 </div>
-                <div class="input-form">
-                    <label>Quantidade:</label>
-                    <input type="text" placeholder="Quantidade...">
-                </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem..."></textarea>
 
                 <div class="input-form">
-                    <label>Endereço:</label>
-                    <input type="text" placeholder="Digite seu endereco...">
+                    <div class="input-form-space">
+                        <label>Quitutes:</label>
+                    </div>
+                    <select name="cars">
+                            <option value="">Escolha:</option>
+                            <option value="SAL">Salgados</option>
+                            <option value="DOC">Doces</option>
+                            <option value="MIS">Misto</option>
+                    </select>
                 </div>
-                
-                <input type="checkbox" id="checkbox" class="input_chekbox" name="checkbox" value=""> Desejo retirar em mãos.
-                
+
                 <div class="input-form">
-                    <label>Telefone:</label>
-                    <input type="text" placeholder="Digite o seu telefone...">
+                    <div class="input-form-space">
+                        <label>Quantidade:</label>
+                    </div>
+                        <input type="text" placeholder="Quantidade...">
+                </div>
+
+                <div class="input-form">
+                    <div class="input-form-space">
+                        <label>Mensagem:</label>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+                </div>
+
+                <div class="input-form">
+                    <div class="input-form-space">
+                        <label>Endereço:</label>
+                    </div>
+                        <input type="text" placeholder="Digite seu endereco...">
+                </div>
+
+                <div class="input-form">
+                    <div class="input-form-space">
+                        <label>Telefone:</label>
+                    </div>
+                        <input type="text" placeholder="Digite o seu telefone...">
+                </div>
+
+                <div class="checkbox">                
+                    <input type="checkbox" id="checkbox" class="input_chekbox" name="checkbox" value=""> Desejo retirar em mãos.
                 </div>
 
                 <div class="buttons">
-                    <button>Limpar</button><button>Enviar</button>
+                    <button class="btn-error" type="reset">Limpar</button><button class="btn-ok" type="submit">Enviar</button>
                 </div>
 			</form>
 		</div>
 	</section>
-    <footer>
+    <footer class="rodape">
         <div class="footer">
             <p class="title__footer">Palmeirinha Festas todos os direitos reservados &copy; 2019</p>
             <img src="img/facebook.png" alt="facebook">
