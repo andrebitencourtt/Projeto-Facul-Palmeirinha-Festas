@@ -131,6 +131,7 @@ a{
 
 tr,td,th{
     padding: 1em 3em;
+    border-left: outset;
 }
 
 td,td{
@@ -171,6 +172,7 @@ td,td{
 
 form {
   border-left: #c24e4b solid .5rem;
+  border-right: #c24e4b solid .5rem;
   margin: 0 auto;
   width: 40%;
   margin-bottom: 4em;
@@ -188,10 +190,12 @@ form {
 .contato input, textarea, select{
   width: 96%;
   margin-bottom: 1.5em;
+  margin-right: 20px;
   padding: 4px 8px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   border: 2px solid #ccc;
+  resize: none;
 }
 
 .contato button {
@@ -200,7 +204,7 @@ form {
   color: white;
   width: 210px;
   height: 38px;
-  font-size: 1.2em;
+  font-size: 0.9em;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   box-shadow: 3px 4px #00000082;
@@ -217,22 +221,20 @@ form {
 .contato .buttons{
     display: flex;
     justify-content: space-between;
-    margin-left: 3em;
+    margin: 0 2em;
 }
 
-/*        div              */
+/*        divisorias           */
 
 .divisoria_1{
     margin-top: 3em;
     width: 100%;
-    height: 5%;
-    border-bottom: #1e2c35 solid 2em;
+    border-bottom: #1e2c35 solid 1em;
 }
 
 .divisoria_2{
     width: 100%;
-    height: 5%;
-    border-bottom: #c24e4b solid 2em;
+    border-bottom: #c24e4b solid 1em;
 }
 
 /*        footer           */

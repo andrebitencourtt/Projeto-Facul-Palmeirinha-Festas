@@ -7,17 +7,23 @@
 	<meta name="author" content="Andre Bitencourt">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-	<link rel="stylesheet" type="text/css" href="css/site.css"/>
-	<title>Palmeirinha Festas</title>
+    <link rel="stylesheet" type="text/css" href="css/site.css"/>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="js/site.js"></script>
+	<title>Palmeirinha - Festas</title>
 </head>
 <body class="app">
 	<header class="cabecalho">
 		<div class="title">
             <p class="title__principal">Palmeirinha Festas</p>
-            <div class="sub__title">
+            <nav class="sub__title">
                 <a href="#quitutes"><p class="subtitle__principal">► Quitutes</p></a>
                 <a href="#pedidos"><p class="subtitle__principal">► Pedidos</p></a>
-            </div>
+            </nav>
 		</div>
     </header>
     <section class="conteudo">
@@ -43,76 +49,76 @@
     <section class="tabela">
         <h2 class="titulo-secao" id="quitutes">Quitutes</h2>
         <div class="tabelas__produtos">
-				<table class="tabela__produtos__precos">
-					<thead>
-						<tr>
-							<th>Categoria</th>
-							<th>Nome</th>
-							<th>Valor Unitário</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>DOCE</td>
-							<td>Brigadeiro</td>
-							<td>R$15,00</td>
-						</tr>
-						<tr>
-							<td>DOCE</td>
-							<td>Beijinho</td>
-							<td>R$16,00</td>
-						</tr>
-						<tr>
-							<td>DOCE</td>
-							<td>Brigadeiro Gourmet</td>
-							<td>R$18,00</td>
-						</tr>
-						<tr>
-							<td>SALGADO</td>
-							<td>Coxinha</td>
-							<td>R$14,00</td>
-                        </tr>
-                        <tr>
-                            <td>SALGADO</td>
-                            <td>Pastel</td>
-                            <td>R$14,00</td>
-                        </tr>
-                        <tr>
-                            <td>SALGADO</td>
-                            <td>Bolinha de Queijo</td>
-                            <td>R$14,00</td>
-                        </tr>
-					</tbody>
-				</table>
-            </div>
-            <div class="divisoria_1"></div>
-            <div class="divisoria_2"></div>
+            <table class="tabela__produtos__precos">
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Nome</th>
+                        <th>Valor Unitário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DOCE</td>
+                        <td>Brigadeiro</td>
+                        <td>R$15,00</td>
+                    </tr>
+                    <tr>
+                        <td>DOCE</td>
+                        <td>Beijinho</td>
+                        <td>R$16,00</td>
+                    </tr>
+                    <tr>
+                        <td>DOCE</td>
+                        <td>Brigadeiro Gourmet</td>
+                        <td>R$18,00</td>
+                    </tr>
+                    <tr>
+                        <td>SALGADO</td>
+                        <td>Coxinha</td>
+                        <td>R$14,00</td>
+                    </tr>
+                    <tr>
+                        <td>SALGADO</td>
+                        <td>Pastel</td>
+                        <td>R$14,00</td>
+                    </tr>
+                    <tr>
+                        <td>SALGADO</td>
+                        <td>Bolinha de Queijo</td>
+                        <td>R$14,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="divisoria_1"></div>
+        <div class="divisoria_2"></div>
     </section>
     <section class="contato">
 		<div class="container">
-			<form action="">
+			<form method="POST" action="index.html" name="form" onsubmit="return validaFormulario()">
                 <h2 class="titulo-secao" id="pedidos">Pedidos</h2>
 
                 <div class="input-form">
                     <div class="input-form-space">
                         <label>Nome:</label>
                     </div>
-                        <input type="text" placeholder="Digite seu nome...">
+                        <input type="text" name="name" placeholder="Digite seu nome...">
                 </div>
 
                 <div class="input-form">
                     <div class="input-form-space">
                         <label>Entrega:</label>
                     </div>
-                        <input type="date"  name="calendario"/>
-                        <input type="text" placeholder="Horário">
+                        <input type="date"  name="calendario" value="" />
+                        <input type="time" id="time" name="time"> <!--min="08:00" max="18:00"-->
                 </div>
 
                 <div class="input-form">
                     <div class="input-form-space">
                         <label>Quitutes:</label>
                     </div>
-                    <select name="cars">
+                    <select name="quitutes">
                             <option value="">Escolha:</option>
                             <option value="SAL">Salgados</option>
                             <option value="DOC">Doces</option>
@@ -124,28 +130,28 @@
                     <div class="input-form-space">
                         <label>Quantidade:</label>
                     </div>
-                        <input type="text" placeholder="Quantidade...">
+                        <input type="text" name="qtd" id="quantidade" placeholder="Quantidade..." onchange="verificaQuatidade(this.value)">
                 </div>
 
                 <div class="input-form">
                     <div class="input-form-space">
                         <label>Mensagem:</label>
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Descreva seu pedido (ao deixar em branco, o pedido será sortido)."></textarea>
                 </div>
 
                 <div class="input-form">
                     <div class="input-form-space">
                         <label>Endereço:</label>
                     </div>
-                        <input type="text" placeholder="Digite seu endereco...">
+                        <input type="text" name="endereco" placeholder="Digite seu endereco...">
                 </div>
 
                 <div class="input-form">
                     <div class="input-form-space">
                         <label>Telefone:</label>
                     </div>
-                        <input type="text" placeholder="Digite o seu telefone...">
+                        <input type="text" name="telefone" placeholder="Digite o seu telefone...">
                 </div>
 
                 <div class="checkbox">                
@@ -155,7 +161,7 @@
                 <div class="buttons">
                     <button class="btn-error" type="reset">Limpar</button><button class="btn-ok" type="submit">Enviar</button>
                 </div>
-			</form>
+            </form>
 		</div>
 	</section>
     <footer class="rodape">
