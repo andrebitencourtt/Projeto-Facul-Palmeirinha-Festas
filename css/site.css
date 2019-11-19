@@ -138,6 +138,19 @@ td,td{
     font-size: 14px;
 }
 
+/*        divisorias           */
+
+.divisoria_1{
+    margin-top: 3em;
+    width: 100%;
+    border-bottom: #1e2c35 solid 1em;
+}
+
+.divisoria_2{
+    width: 100%;
+    border-bottom: #c24e4b solid 1em;
+}
+
 /*        form         */
 .titulo-secao{
     margin-top: 2em;
@@ -158,6 +171,10 @@ td,td{
     color: #1e2c35;
     padding: 10px 20px 0px 20px;
     margin-top: -7px;
+}
+
+.contato p{
+    font-family: Tahoma;
 }
 
 .checkbox{
@@ -222,19 +239,6 @@ form {
     display: flex;
     justify-content: space-between;
     margin: 0 2em;
-}
-
-/*        divisorias           */
-
-.divisoria_1{
-    margin-top: 3em;
-    width: 100%;
-    border-bottom: #1e2c35 solid 1em;
-}
-
-.divisoria_2{
-    width: 100%;
-    border-bottom: #c24e4b solid 1em;
 }
 
 /*        footer           */
